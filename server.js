@@ -4,12 +4,12 @@ import cors from 'cors';
 import { MongoClient } from 'mongodb';
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001; // Usar el puerto proporcionado por Railway
 
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://letitout.vercel.app/'
+    origin: 'https://letitout.vercel.app' // Asegúrate de que esta URL sea correcta
 }));
 
 // URI con la contraseña codificada

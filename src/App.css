@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-h1 {
+  color: rgba(59, 91, 206, 0.829);
+}
+
+.nav-container {
+  color: white;
+  background-color: rgba(59, 91, 206, 0.829);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  transition: .3s ease all;
+  color: rgba(28, 42, 92, 0.829);
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-button {
+  background-color: rgba(59, 91, 206, 0.829);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: blue;
+  transition: 0.3s ease all;
+}
+
+.home-button:active{
+  box-shadow: inset 5px 5px 10px #000;
+}
+
+.input-container {
+  border: 1px solid;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #888;
+}
+
+.walls-container {
+  border: 1px solid rgba(59, 91, 206, 0.829);
+  padding: 20px;
+  margin-top: 10px;
+  max-width: 95%;
+  box-shadow: 5px 5px 10px rgba(59, 91, 206, 0.829);
+}
+
+.user-date {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.date {
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+.walls-user {
+  color: rgba(59, 91, 206, 0.829);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.walls {
+  margin-left: 10px;
+}
+
+.walls-actions {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgba(59, 91, 206, 0.829);
+}
+
+.walls-comments {
+  cursor: pointer;
+}
+
+.walls-reports {
+  cursor: pointer;
+}
+
+.suggestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}

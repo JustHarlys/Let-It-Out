@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001; // Usar el puerto proporcionado por Railw
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'http://localhost:5173' // Asegúrate de que esta URL sea correcta
+    origin: 'https://letitout.vercel.app' // Asegúrate de que esta URL sea correcta
 }));
 
 // URI con la contraseña codificada

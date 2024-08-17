@@ -2,18 +2,21 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express();
-const port = process.env.PORT || 3001; // Usar el puerto proporcionado por Railway
+const port = process.env.PORT || 3001; 
 
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://letitout.vercel.app' // Asegúrate de que esta URL sea correcta
+    origin: 'https://letitout.vercel.app' 
 }));
 
-// URI con la contraseña codificada
-const mongoUri = "mongodb+srv://Harlys:Harlys%401234@letitoutcluster.hqqmu.mongodb.net/LetItOut?retryWrites=true&w=majority";
+
+const mongoUri = process.env.DATABASE_URL;
 let db;
 
 MongoClient.connect(mongoUri)

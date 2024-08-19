@@ -35,8 +35,8 @@ function Home(props) {
       <main className='home'>
         <div className='main-text'>
           <h1 className='home-h1'>Let It Out</h1>
-          <p>You can use this platform anonymously to vent out whatever you need to</p>
-          <p>No one can, should nor will know who you are (unless you tell them which is completely up to you)</p>
+          <p>You can use this platform anonymously to vent out </p>
+          <p>No one can, should nor will know who you are</p>
           <p>Beware of sensitive information being shared.</p>
           <p>Each entry your user changes</p>
         </div>

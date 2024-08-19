@@ -82,11 +82,10 @@ body {
 }
 
 .walls-container {
-  border: 1px solid rgba(59, 91, 206, 0.829);
+  border-bottom: 1px solid rgba(59, 91, 206, 0.829);
   padding: 20px;
   margin-top: 10px;
   max-width: 95%;
-  box-shadow: 5px 5px 10px rgba(59, 91, 206, 0.829);
 }
 
 .user-date {

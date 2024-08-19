@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import '../App.css'
 
 const now = new Date()
@@ -9,10 +8,11 @@ const day = now.getDate()
 const fullDate = `${month}/${day}/${year}`
 
 function Walls(props) {
-  return (
+  const reversedEntries = [...props.wallsEntries].reverse()
 
+  return (
     <main className='walls'>
-        {props.wallsEntries.map(entry => (
+        {reversedEntries.map(entry => (
             <div key={entry.id} className='walls-container'>
 
             <div className='user-date'>

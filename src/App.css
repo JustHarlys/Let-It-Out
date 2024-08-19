@@ -34,6 +34,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-item {
@@ -42,7 +43,7 @@ body {
 
 .nav-item:hover {
   transition: .3s ease all;
-  color: rgba(28, 42, 92, 0.829);
+
 }
 
 .main-text {
@@ -130,4 +131,34 @@ body {
     flex-direction: column;
     align-items: center;
   
+}
+
+#darkModeToggle {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 80px;
+  padding: 8px;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  cursor: pointer;
+  transition: .4s all ease;
+}
+
+#lightModeToggle {
+  background-color: transparent;
+  border: 1px solid rgba(28, 42, 92, 0.829);
+  border-radius: 80px;
+  padding: 8px;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: rgba(28, 42, 92, 0.829);
+  cursor: pointer;
+  transition: .4s all ease;
 }

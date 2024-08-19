@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import '../App.css'
 
 function Nav({handleWindowsHome, handleWindowsSuggestions, windows}) {
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  function toggleDark() {
+    setDarkMode(prevMode => !prevMode)
+  }
 
   let windowsContrary = !windows
   return (
@@ -11,6 +18,9 @@ function Nav({handleWindowsHome, handleWindowsSuggestions, windows}) {
             <ul className='nav-items'>
                 <li className='nav-item' onClick={handleWindowsHome} style={{color: windows ? "rgba(28, 42, 92, 0.829)" : "white"}}>Home</li>
                 <li className='nav-item' onClick={handleWindowsSuggestions} style={{color: windowsContrary ? "rgba(28, 42, 92, 0.829)" : "white"}}>Suggestions</li>
+                <button id={darkMode ? "darkModeToggle" : "lightModeToggle"} onClick={toggleDark}>
+                  <i className="fas fa-moon"></i>
+                </button>
             </ul>
         </nav>
     </>

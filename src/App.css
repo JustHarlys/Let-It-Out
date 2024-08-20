@@ -203,7 +203,7 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: 181c1f;
+  color: #181c1f;
   cursor: pointer;
   transition: .4s all ease;
 }
@@ -233,3 +233,6 @@ body {
   }
 }
 
+@media screen (max-width: 414px) {
+
+}

@@ -94,7 +94,7 @@ body {
 
 .walls-container {
   padding: 20px;
-  max-width: 95%;
+  max-width: 100%;
   transition: background-color 1s ease;
 }
 

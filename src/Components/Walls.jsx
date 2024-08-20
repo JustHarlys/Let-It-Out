@@ -13,11 +13,11 @@ function Walls(props) {
   return (
     <main className='walls' > 
         {reversedEntries.map(entry => (
-            <div key={entry.id} className='walls-container' id={props.darkMode ? 'darWalls' : 'lightWalls'}>
+            <div key={entry.id} className='walls-container' id={props.darkMode ? 'darkWalls' : 'lightWalls'}>
 
             <div className='user-date'>
 
-            <p className='walls-user'>{entry.id}</p>
+            <p className='walls-user' style={{color: props.darkMode ? '#181cf1' : 'rgba(59, 91, 206, 0.829)'}}>{entry.id}</p>
             <p className='date'>{fullDate}</p>
             </div>
             <p className='walls-text'>{entry.message}</p>

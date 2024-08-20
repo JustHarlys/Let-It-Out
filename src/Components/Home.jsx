@@ -3,8 +3,7 @@ import '../App.css'
 
 function Home(props) {
 
-  async function sendMessage(event) {
-    event.preventDefault(); 
+  async function sendMessage() {
 
     try {
       const response = await fetch(`https://let-it-out-production.up.railway.app/saveEntry`, {

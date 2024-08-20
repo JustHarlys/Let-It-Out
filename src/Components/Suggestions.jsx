@@ -50,8 +50,8 @@ function Suggestions(props) {
       <main className='suggestions' id={props.darkMode ? 'darkHome' : 'lightHome'}>
         <h1 className='home-h1' style={{color: props.darkMode ? 'white' : 'rgba(59, 91, 206, 0.829)'}}>Let It Out</h1>
 
-        <p>You can use this space to submit your suggestions to the creator</p>
-        <p>Be respectful and get to the point, we will make sure to add your feature asap!</p>
+        <p>You can use this space to submit your suggestions</p>
+        <p>Be respectful and get to the point, thanks!</p>
 
         {suggestionSent ? 'Suggestion Sent!' : 
           <form onSubmit={sendSuggestion}>

@@ -11,9 +11,9 @@ function Walls(props) {
   const reversedEntries = [...props.wallsEntries].reverse()
 
   return (
-    <main className='walls'>
+    <main className='walls' > 
         {reversedEntries.map(entry => (
-            <div key={entry.id} className='walls-container'>
+            <div key={entry.id} className='walls-container' id={props.darkMode ? 'darWalls' : 'lightWalls'}>
 
             <div className='user-date'>
 

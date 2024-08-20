@@ -7,12 +7,20 @@ import Suggestions from './Components/Suggestions';
 import { nanoid } from 'nanoid';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false)
   const [windows, setWindows] = useState(true);
   const [wallsEntries, setWallsEntries] = useState([]);
   const [message, setMessage] = useState({
     id: nanoid(),
     message: ''
   });
+
+
+  
+  
+  function toggleDark() {
+    setDarkMode(prevMode => !prevMode)
+  }
 
   function handleWindowsSuggestions() {
     setWindows(false);
@@ -31,7 +39,15 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('https://let-it-out-production.up.railway.app/getEntries') // Cambia la URL aquí
+    if (darkMode) {
+      document.body.classList.add('darkHome')
+    } else {
+      document.body.classList.remove('darkHome')
+    }
+  }, [darkMode])
+
+  useEffect(() => {
+    fetch('https://let-it-out-production.up.railway.app/getEntries') 
       .then(res => {
         if (!res.ok) {
           throw new Error('Network response was not ok' + res.statusText);
@@ -43,11 +59,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Nav handleWindowsSuggestions={handleWindowsSuggestions} handleWindowsHome={handleWindowsHome} windows={windows} />
-      {windows ? <Home id={message.id} message={message.message} handleChange={handleChange} messageObj={message} /> : <Suggestions id={message.id} />}
-      {windows && <Walls wallsEntries={wallsEntries} />}
-    </>
+    <div className='whole-app' id={darkMode ? 'darkHome' : 'lightHome'}>
+      <Nav handleWindowsSuggestions={handleWindowsSuggestions} handleWindowsHome={handleWindowsHome} windows={windows} darkMode={darkMode} toggleDark={toggleDark}/>
+      {windows ? <Home id={message.id} message={message.message} handleChange={handleChange} messageObj={message} darkMode={darkMode}/> : <Suggestions id={message.id} darkMode={darkMode}/>}
+      {windows && <Walls wallsEntries={wallsEntries} darkMode={darkMode} windows={windows}/>}
+    </div>
   );
 }
 

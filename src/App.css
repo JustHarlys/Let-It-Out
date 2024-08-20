@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
 * {
   box-sizing: border-box;
 }
@@ -8,12 +7,22 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  transition: 1s ease ;
+}
+
+.whole-app {
+  transition: background-color 1s ease all;
+}
+
+.empty-walls {
+  transition: 1s ease all;
 }
 
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background-color 1s ease, color 1s ease;
 }
 
 .home-h1 {
@@ -21,13 +30,13 @@ body {
 }
 
 .nav-container {
-  color: white;
-  background-color: rgba(59, 91, 206, 0.829);
+
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  transition: background-color 1s ease, color 1s ease;
 }
 
 .nav-items {
@@ -39,10 +48,11 @@ body {
 
 .nav-item {
   cursor: pointer;
+  transition: 1s ease all;
 }
 
 .nav-item:hover {
-  transition: .3s ease all;
+  transition: 0.5s ease all;
 
 }
 
@@ -83,10 +93,9 @@ body {
 }
 
 .walls-container {
-  border-bottom: 1px solid rgba(59, 91, 206, 0.829);
   padding: 20px;
-  margin-top: 10px;
   max-width: 95%;
+  transition: background-color 1s ease;
 }
 
 .user-date {
@@ -101,13 +110,12 @@ body {
 }
 
 .walls-user {
-  color: rgba(59, 91, 206, 0.829);
   text-decoration: underline;
   font-weight: bold;
 }
 
 .walls {
-  margin-left: 10px;
+  transition: 1s ease;
 }
 
 .walls-actions {
@@ -130,7 +138,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    transition: background-color 1s ease, color 1s ease;
+}
+
+/* DarkMode - LightMode Section */
+
+#darkHome {
+  background-color: #181c1f;
+  color: white;
+}
+
+.darkHome {
+  background-color: #181c1f;
+}
+
+#lightHome {
+  background-color: white;
+}
+
+#darkWalls {
+  background-color: #181c1f;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#lightWalls {
+  background-color: white;
+  border-bottom: 1px solid rgba(59, 91, 206, 0.829);
+}
+
+#darkNav {
+  background-color: #181c1f;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#lightNav {
+  color: white;
+  background-color: rgba(59, 91, 206, 0.829);
 }
 
 #darkModeToggle {
@@ -150,7 +195,7 @@ body {
 
 #lightModeToggle {
   background-color: transparent;
-  border: 1px solid rgba(28, 42, 92, 0.829);
+  border: 1px solid #181c1f;
   border-radius: 80px;
   padding: 8px;
   font-size: 1em;
@@ -158,7 +203,33 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: rgba(28, 42, 92, 0.829);
+  color: 181c1f;
   cursor: pointer;
   transition: .4s all ease;
 }
+
+#darkModeToggle:hover {
+  box-shadow: 0 0 20px 0 #fff;
+}
+
+#lightModeToggle:hover {
+  box-shadow: 0 0 20px 0 #181c1f;
+}
+
+/* Button Rotation  */
+
+@keyframes logo-sping {
+  from {
+    transform: rotate(0deg);
+  } 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .darkModeToggle {
+    animation: logo-sping infinite 6s linear
+  }
+}
+

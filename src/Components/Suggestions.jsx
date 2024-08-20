@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Suggestions(props) {
   const [suggestionSent, setSuggestionSent] = useState(false);
@@ -18,7 +18,7 @@ function Suggestions(props) {
 
   async function sendSuggestion(event) {
     event.preventDefault();
-    setSuggestionSent(true); // Marca la sugerencia como enviada
+    setSuggestionSent(true); 
     try {
       const res = await fetch('https://let-it-out-production.up.railway.app/saveSuggestion', {
         method: 'POST',
@@ -35,9 +35,9 @@ function Suggestions(props) {
       const data = await res.text();
       console.log(data);
 
-      // Limpia los campos del formulario
+ 
       setSuggestion({
-        id: nanoid(), // Genera un nuevo ID para la próxima sugerencia
+        id: nanoid(), 
         suggestion: ''
       });
     } catch (err) {
@@ -47,8 +47,8 @@ function Suggestions(props) {
 
   return (
     <>
-      <main className='suggestions'>
-        <h1 className='home-h1'>Let It Out</h1>
+      <main className='suggestions' id={props.darkMode ? 'darkHome' : 'lightHome'}>
+        <h1 className='home-h1' style={{color: props.darkMode ? 'white' : 'rgba(59, 91, 206, 0.829)'}}>Let It Out</h1>
 
         <p>You can use this space to submit your suggestions to the creator</p>
         <p>Be respectful and get to the point, we will make sure to add your feature asap!</p>

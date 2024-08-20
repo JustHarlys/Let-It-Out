@@ -4,7 +4,7 @@ import '../App.css'
 function Home(props) {
 
   async function sendMessage(event) {
-    event.preventDefault(); // Evita la recarga de la página
+    event.preventDefault(); 
 
     try {
       const response = await fetch(`https://let-it-out-production.up.railway.app/saveEntry`, {
@@ -22,7 +22,7 @@ function Home(props) {
       const data = await response.text();
       console.log(data);
 
-      // Aquí podrías actualizar el estado del mensaje y del ID
+      
       props.handleChange({ target: { name: 'id', value: nanoid() } });
       props.handleChange({ target: { name: 'message', value: '' } });
     } catch (err) {
@@ -32,9 +32,9 @@ function Home(props) {
 
   return (
     <>
-      <main className='home'>
+      <main className='home' id={props.darkMode ? 'darkHome' : 'lightHome'}>
         <div className='main-text'>
-          <h1 className='home-h1'>Let It Out</h1>
+          <h1 className='home-h1' style={{color: props.darkMode ? 'white' : 'rgba(59, 91, 206, 0.829)'}}>Let It Out</h1>
           <p>You can use this platform anonymously to vent out </p>
           <p>No one can, should nor will know who you are</p>
           <p>Beware of sensitive information being shared.</p>

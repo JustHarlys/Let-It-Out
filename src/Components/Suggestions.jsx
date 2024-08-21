@@ -62,6 +62,7 @@ function Suggestions(props) {
                 name='suggestion'
                 value={suggestion.suggestion}
                 onChange={handleSuggestion}
+                className='input'
                 required
               />
               <button type='submit' className='home-button'>Submit Suggestion</button>

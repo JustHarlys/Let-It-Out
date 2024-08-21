@@ -20,7 +20,6 @@ function Home(props) {
 
       const data = await response.text();
       console.log(data);
-
       
       props.handleChange({ target: { name: 'id', value: nanoid() } });
       props.handleChange({ target: { name: 'message', value: '' } });
@@ -49,6 +48,7 @@ function Home(props) {
               name="message" 
               value={props.message}
               onChange={props.handleChange}
+              className='input'
             />
             <button type="submit" className='home-button'>Click</button>
           </div>

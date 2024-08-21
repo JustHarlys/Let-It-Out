@@ -12,11 +12,9 @@ function App() {
   const [wallsEntries, setWallsEntries] = useState([]);
   const [message, setMessage] = useState({
     id: nanoid(),
-    message: ''
+    message: '',
+    date: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`
   });
-
-
-  
   
   function toggleDark() {
     setDarkMode(prevMode => !prevMode)

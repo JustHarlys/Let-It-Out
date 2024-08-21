@@ -1,11 +1,6 @@
 import '../App.css'
 
-const now = new Date()
-const year = now.getFullYear()
-const month = now.getMonth() + 1
-const day = now.getDate()
 
-const fullDate = `${month}/${day}/${year}`
 
 function Walls(props) {
   const reversedEntries = [...props.wallsEntries].reverse()
@@ -18,7 +13,7 @@ function Walls(props) {
             <div className='user-date'>
 
             <p className='walls-user' style={{color: props.darkMode ? '#181cf1' : 'rgba(59, 91, 206, 0.829)'}}>{entry.id}</p>
-            <p className='date'>{fullDate}</p>
+            <p className='date'>{entry.date}</p>
             </div>
             <p className='walls-text'>{entry.message}</p>
             </div>

@@ -23,6 +23,7 @@ function Home(props) {
       
       props.handleChange({ target: { name: 'id', value: nanoid() } });
       props.handleChange({ target: { name: 'message', value: '' } });
+      props.handleChange({target: { name: 'date', value: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`}})
     } catch (err) {
       console.log('Error during fetch: ', err);
     }

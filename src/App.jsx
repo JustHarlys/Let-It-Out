@@ -13,7 +13,6 @@ function App() {
   const [message, setMessage] = useState({
     id: nanoid(),
     message: '',
-    date: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`
   });
   
   function toggleDark() {

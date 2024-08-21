@@ -6,7 +6,6 @@ function Home(props) {
   async function sendMessage() {
 
     try {
-      props.handleChange({target: { name: 'date', value: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`}})
       const response = await fetch(`https://let-it-out-production.up.railway.app/saveEntry`, {
         method: 'POST',
         headers: {
@@ -14,11 +13,11 @@ function Home(props) {
         },
         body: JSON.stringify(props.messageObj)
       });
-
+      
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`)
       }
-
+      
       const data = await response.text();
       console.log(data);
       

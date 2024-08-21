@@ -37,10 +37,10 @@ app.get('/getEntries', async (req, res) => {
 });
 
 app.post('/saveEntry', async (req, res) => {
-    const { id, message } = req.body;
+    const { id, message, date } = req.body;
 
     try {
-        await db.collection('Entries').insertOne({ id, message });
+        await db.collection('Entries').insertOne({ id, message, date });
         res.send('Entry data inserted');
     } catch (err) {
         console.log('MongoDB Error', err);

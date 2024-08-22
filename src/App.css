@@ -118,6 +118,7 @@ body {
 .walls-user {
   text-decoration: underline;
   font-weight: bold;
+  transition: 1s ease;
 }
 
 .walls {

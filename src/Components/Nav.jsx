@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../App.css'
 
 function Nav({handleWindowsHome, handleWindowsSuggestions, windows, darkMode, toggleDark}) {

@@ -70,11 +70,12 @@ body {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .home-button:hover {
   background-color: blue;
-  transition: 0.3s ease all;
+  transition: .9s ease all;
 }
 
 .home-button:active{
@@ -236,8 +237,4 @@ body {
   .darkModeToggle {
     animation: logo-sping infinite 6s linear
   }
-}
-
-@media screen (max-width: 414px) {
-
 }

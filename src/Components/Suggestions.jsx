@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
 

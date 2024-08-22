@@ -7,12 +7,21 @@ import Suggestions from './Components/Suggestions';
 import { nanoid } from 'nanoid';
 
 function App() {
+
+  const date = new Date()
+  const year = date.getFullYear()
+  const day = date.getDate()
+  const month = date.getMonth() + 1
+
+  const fullDate = `${month}/${day}/${year}`
+
   const [darkMode, setDarkMode] = useState(false)
   const [windows, setWindows] = useState(true);
   const [wallsEntries, setWallsEntries] = useState([]);
   const [message, setMessage] = useState({
     id: nanoid(),
     message: '',
+    date: fullDate
   });
   
   function toggleDark() {

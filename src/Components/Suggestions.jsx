@@ -2,10 +2,11 @@ import { nanoid } from 'nanoid';
 import { useState } from 'react';
 
 function Suggestions(props) {
+  
   const [suggestionSent, setSuggestionSent] = useState(false);
   const [suggestion, setSuggestion] = useState({
     id: props.id,
-    suggestion: ''
+    suggestion: '',
   });
 
   function handleSuggestion(event) {

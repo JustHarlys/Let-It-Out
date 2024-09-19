@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import '../App.css'
+import { DarkModeContext } from '../Context/DarkModeToggle';
+import { useContext } from 'react';
 
-function Nav({handleWindowsHome, handleWindowsSuggestions, windows, darkMode, toggleDark}) {
+function Nav({handleWindowsHome, handleWindowsSuggestions, windows}) {
 
+  const {darkMode, toggleDark} = useContext(DarkModeContext) 
 
   let windowsContrary = !windows
   return (

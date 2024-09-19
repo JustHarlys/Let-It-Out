@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
+import { DarkModeContext } from '../Context/DarkModeToggle';
+import { useContext } from 'react';
 
 function Suggestions(props) {
+
+  const {darkMode} = useContext(DarkModeContext)
   
   const [suggestionSent, setSuggestionSent] = useState(false);
   const [suggestion, setSuggestion] = useState({
@@ -49,8 +53,8 @@ function Suggestions(props) {
 
   return (
     <>
-      <main className='suggestions' id={props.darkMode ? 'darkHome' : 'lightHome'}>
-        <h1 className='home-h1' style={{color: props.darkMode ? 'white' : 'rgba(59, 91, 206, 0.829)'}}>Let It Out</h1>
+      <main className='suggestions' id={darkMode ? 'darkHome' : 'lightHome'}>
+        <h1 className='home-h1' style={{color: darkMode ? 'white' : 'rgba(59, 91, 206, 0.829)'}}>Let It Out</h1>
 
         <p>You can use this space to submit your suggestions</p>
         <p>Be respectful and get to the point, thanks!</p>

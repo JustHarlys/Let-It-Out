@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import '../App.css'
 import { DarkModeContext } from '../Context/DarkModeToggle';
 import { useContext } from 'react';

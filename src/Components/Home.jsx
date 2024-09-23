@@ -46,7 +46,7 @@ function Home(props) {
 
         <form onSubmit={sendMessage}>
           <div className='input-container'>
-            <p>What are you going through?</p>
+            <p>What you have to say?</p>
 
             <input 
               type="text" 
